@@ -1,10 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap");
 
-*{
-  margin:0;
+* {
+  margin: 0;
   padding: 0;
 }
 
-body{
-font-family: 'Manrope', sans-serif;
+body {
+  font-family: "Manrope", sans-serif;
+}
+.button-contained,
+.button-outlined {
+  text-transform: capitalize !important;
+  border-radius: 2em !important;
+  font-weight: bold !important;
+  padding: 0.5em 2em !important;
+  font-size: 1.5em !important;
+}
+
+.button-contained {
+  margin-right: 20px !important;
+}
+.button-outlined {
+  color: #fff !important;
+  border-color: #fff !important;
 }

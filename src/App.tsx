@@ -1,10 +1,13 @@
-
 import './App.css';
+import Home from './components/Home';
+import { CssBaseline } from '@mui/material'
 
 function App() {
   return (
     <div className="App">
-      <h2>Hello Breet Challenge</h2>
+      <Home />
+      <CssBaseline />
+
     </div>
   );
 }

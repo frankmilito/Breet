@@ -4,6 +4,8 @@ import backgroundImage from '../assets/background.svg'
 import HeroSection from './HeroSection'
 import Services from './services/Services'
 import Testimonials from './Testimonials'
+import Faq from './Faq'
+import Blog from './Blog'
 const useStyles = makeStyles((theme) => ({
     wrapper: {
         background: `url(${backgroundImage})`,
@@ -21,6 +23,8 @@ const Home = () => {
             <HeroSection />
             <Services />
             <Testimonials />
+            <Faq />
+            <Blog />
         </div>
     )
 }

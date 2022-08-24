@@ -1,22 +1,29 @@
-import React from 'react'
 import { makeStyles } from '@mui/styles'
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-
-const useStyles = makeStyles((theme) => ({
+import { Theme } from '@mui/system'
+const useStyles = makeStyles((theme: Theme) => ({
     container: {
         padding: '5em 8em',
         textAlign: 'left',
-        fontFamily: 'Open sans'
+        fontFamily: 'Open sans',
+        [theme.breakpoints.down('md')]: {
+            padding: '2em 4em'
+        }
     },
     title: {
         color: 'rgba(0, 0, 0, 1)',
         fontSize: '20px',
         fontWeight: 400,
+        [theme.breakpoints.down('md')]: {
+            fontSize: '16px'
+        }
     },
     subtitle: {
         color: 'rgba(119, 119, 119, 1)',
         fontSize: '16px',
         fontWeight: 400,
+        [theme.breakpoints.down('md')]: {
+            fontSize: '14px'
+        }
     },
     links: {
         display: 'flex',

@@ -6,31 +6,50 @@ import card1 from '../../assets/card1.svg'
 import customer1 from '../../assets/customer1.svg'
 import customer2 from '../../assets/customer2.svg'
 import checkImage from '../../assets/checkImage.svg'
+import { Theme } from '@mui/system'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
     container: {
         padding: '5em 0',
-        textAlign: 'center'
+        textAlign: 'center',
+        [theme.breakpoints.down('md')]: {
+            padding: '2em 0'
+        },
     },
     titleContainer: {
         width: '50%',
-        margin: '0 auto'
+        margin: '0 auto',
+        [theme.breakpoints.down('md')]: {
+            width: '100%'
+        },
     },
     title: {
         color: '#777777',
         fontSize: '18px',
-        marginBottom: '1em'
+        marginBottom: '1em',
+        [theme.breakpoints.down('md')]: {
+            fontSize: '16px',
+        },
     },
     subtitle: {
         color: 'rgba(0, 0, 0, 1)',
         fontSize: '36px',
         lineHeight: '42px',
-        fontWeight: 400
+        fontWeight: 400,
+        [theme.breakpoints.down('md')]: {
+            fontSize: '24px',
+            lineHeight: '30px',
+        },
     },
     cards: {
         display: 'grid',
         gridTemplateColumns: 'repeat(3, 1fr)',
-        gap: '1em'
+        gap: '1em',
+        [theme.breakpoints.down('md')]: {
+            gridTemplateColumns: 'repeat(1,1fr)',
+            placeContent: 'center',
+            alignItems: 'center',
+        },
     },
     sectionContainer: {
         display: 'flex',
@@ -39,7 +58,13 @@ const useStyles = makeStyles((theme) => ({
         height: '100%',
         padding: '0 8em',
         marginTop: '10em',
-        textAlign: 'left'
+        textAlign: 'left',
+        [theme.breakpoints.down('md')]: {
+            flexDirection: 'column',
+            justifyContent: 'center',
+            padding: ' 0 2em',
+            marginTop: '2em'
+        }
     },
     leftSection: {
         // display: 'flex',
@@ -56,6 +81,9 @@ const useStyles = makeStyles((theme) => ({
     image: {
         marginRight: '20px',
         maxWidth: "100%",
+        [theme.breakpoints.down('md')]: {
+            maxWidth: "100%",
+        }
     },
     bulletPoints: {
         display: 'flex',
@@ -66,7 +94,11 @@ const useStyles = makeStyles((theme) => ({
     customerTitle: {
         fontSize: '30px',
         marginBottom: '1em',
-        width: '80%'
+        width: '80%',
+        [theme.breakpoints.down('md')]: {
+            width: '100%',
+            fontSize: '24px'
+        }
     }
 }))
 
@@ -85,7 +117,7 @@ const Services = () => {
             </Box>
             <Grid container className={classes.sectionContainer}>
                 <Grid item md={5} className={classes.leftSection}>
-                    <img src={customer1} alt="" />
+                    <img src={customer1} alt="" className={classes.image} />
                 </Grid>
                 <Grid item md={5} className={classes.rightSection}>
                     <h2 className={classes.customerTitle}>We connect our customers with the best, and help them keep up-and stay open.</h2>
@@ -113,7 +145,7 @@ const Services = () => {
 
                 </Grid>
                 <Grid item md={5} className={classes.leftSection}>
-                    <img src={customer2} alt="" />
+                    <img src={customer2} alt="" className={classes.image} />
                 </Grid>
             </Grid>
 

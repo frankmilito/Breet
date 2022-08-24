@@ -1,7 +1,8 @@
 import { makeStyles } from '@mui/styles'
 import feather from '../../assets/feather.svg'
+import { Theme } from '@mui/system'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
     listItem: {
         boxShadow: '0px 4px 32px rgba(0, 0, 0, 0.08)',
         display: 'flex',
@@ -10,6 +11,11 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: '10px',
         cursor: 'pointer',
         marginBottom: '1em'
+    },
+    subtitle: {
+        [theme.breakpoints.down('md')]: {
+            fontSize: '14px'
+        }
     }
 }))
 const ListItem = () => {
@@ -17,7 +23,7 @@ const ListItem = () => {
     return (
         <div className={classes.listItem}>
             <img src={feather} alt="" style={{ fill: '#000', marginRight: '20px' }} />
-            <h3>We connect our customers with the best.</h3>
+            <h3 className={classes.subtitle}>We connect our customers with the best.</h3>
         </div>
     )
 }

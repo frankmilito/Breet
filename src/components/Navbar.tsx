@@ -77,7 +77,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 function Header() {
     const classes = useStyles();
     const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+    const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
     return (
         <>

@@ -1,7 +1,7 @@
 import { makeStyles } from '@mui/styles'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-
-const useStyles = makeStyles((theme) => ({
+import { Theme } from '@mui/system'
+const useStyles = makeStyles((theme: Theme) => ({
     container: {
         padding: '3em 4em',
         textAlign: 'left',
@@ -9,14 +9,20 @@ const useStyles = makeStyles((theme) => ({
         background: '#fff',
         color: '#000',
         borderRadius: '1em',
-        height: '100%'
+        height: '100%',
+        [theme.breakpoints.down('md')]: {
+            padding: '2em '
+        }
 
     },
     title: {
         color: 'rgba(0, 0, 0, 1)',
         fontSize: '24px',
         fontWeight: 400,
-        marginBottom: '2em'
+        marginBottom: '2em',
+        [theme.breakpoints.down('md')]: {
+            fontSize: '20px'
+        }
     },
     subtitle: {
         fontSize: '20px',

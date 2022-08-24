@@ -1,7 +1,9 @@
 import { makeStyles } from '@mui/styles'
 import { Button, TextField } from '@mui/material'
 import subBackground from '../../assets/subBackground.svg'
-const useStyles = makeStyles((theme) => ({
+import { Theme } from '@mui/system'
+
+const useStyles = makeStyles((theme: Theme) => ({
     container: {
         margin: '0 8em',
         background: `url(${subBackground})`,
@@ -12,8 +14,11 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: '1em',
-        marginBottom: '6em'
-
+        marginBottom: '6em',
+        [theme.breakpoints.down('md')]: {
+            margin: '0 4em',
+            marginBottom: '3em'
+        }
     },
     wrapper: {
         textAlign: 'center',
@@ -25,7 +30,13 @@ const useStyles = makeStyles((theme) => ({
         color: 'white',
         lineHeight: '72px',
         margin: '0 auto',
-        marginBottom: '1em'
+        marginBottom: '1em',
+        [theme.breakpoints.down('md')]: {
+            width: '100%',
+            fontSize: '24px',
+            lineHeight: '32px',
+
+        }
     },
     input: {
         background: '#fff',
@@ -40,7 +51,11 @@ const useStyles = makeStyles((theme) => ({
         gridTemplateColumns: '2fr 1fr',
         gap: '2em',
         width: '80%',
-        margin: '0 auto'
+        margin: '0 auto',
+        [theme.breakpoints.down('md')]: {
+            gridTemplateColumns: '1fr',
+
+        }
     }
 }))
 

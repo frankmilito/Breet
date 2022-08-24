@@ -4,16 +4,26 @@ import Testimonial from './Reusable/Testimonials'
 import person1 from '../assets/person1.svg'
 import person2 from '../assets/person2.svg'
 import person3 from '../assets/person3.svg'
-const useStyles = makeStyles((theme) => ({
+import { Theme } from '@mui/system'
+const useStyles = makeStyles((theme: Theme) => ({
     container: {
+
         padding: '5em 8em',
         background: '#0A2640',
         color: '#FFFFFF',
+        [theme.breakpoints.down('md')]: {
+            padding: '3em 2em'
+        },
     },
     titleContainer: {
         display: 'flex',
         alignItems: 'end',
-        marginBottom: '3em'
+        marginBottom: '3em',
+        [theme.breakpoints.down('md')]: {
+            alignItems: 'center',
+            marginBottom: '2em',
+            flexDirection: 'column',
+        },
     },
     image: {
         maxWidth: '100%',
@@ -21,12 +31,21 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         flex: 2,
-        fontSize: '48px'
+        fontSize: '48px',
+        [theme.breakpoints.down('md')]: {
+            fontSize: '24px',
+            textAlign: 'center',
+            margin: '1em 0'
+        },
     },
     testimonials: {
         display: 'grid',
         gridTemplateColumns: 'repeat(3, 1fr)',
-        gap: '2em'
+        gap: '2em',
+        [theme.breakpoints.down('md')]: {
+            gridTemplateColumns: 'repeat(1, 1fr)',
+            gap: '1em'
+        },
     }
 }))
 const Testimonials = () => {

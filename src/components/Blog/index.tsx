@@ -7,47 +7,48 @@ import blogIcon1 from '../../assets/blogIcon1.svg'
 import blogIcon2 from '../../assets/blogIcon2.svg'
 import blogIcon3 from '../../assets/blogIcon3.svg'
 import Blogs from '../Reusable/Blogs';
+import { Theme } from '@mui/system'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
     container: {
         padding: '5em 0',
-        textAlign: 'center'
+        textAlign: 'center',
+        [theme.breakpoints.down('md')]: {
+            padding: '3em 0'
+        },
     },
     titleContainer: {
         width: '50%',
-        margin: '0 auto'
+        margin: '0 auto',
+        [theme.breakpoints.down('md')]: {
+            width: '100%',
+        },
     },
     title: {
         color: '#777777',
         fontSize: '18px',
-        marginBottom: '1em'
+        marginBottom: '1em',
+        [theme.breakpoints.down('md')]: {
+            fontSize: '16px',
+        },
     },
     subtitle: {
         color: 'rgba(0, 0, 0, 1)',
         fontSize: '36px',
         lineHeight: '42px',
-        fontWeight: 400
+        fontWeight: 400,
+        [theme.breakpoints.down('md')]: {
+            fontSize: '24px',
+            lineHeight: '30px',
+        },
     },
     cards: {
         display: 'grid',
         gridTemplateColumns: 'repeat(3, 1fr)',
-        gap: '1em'
-    },
-    sectionContainer: {
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        height: '100%',
-        padding: '0 8em',
-        marginTop: '10em',
-        textAlign: 'left'
-    },
-    leftSection: {
-        // display: 'flex',
-        // justifyContent: 'flex-end'
-    },
-    rightSection: {
-
+        gap: '1em',
+        [theme.breakpoints.down('md')]: {
+            gridTemplateColumns: 'repeat(1,1fr)',
+        },
     },
     imageBox: {
         display: 'flex',
@@ -67,7 +68,10 @@ const useStyles = makeStyles((theme) => ({
     customerTitle: {
         fontSize: '30px',
         marginBottom: '1em',
-        width: '80%'
+        width: '80%',
+        [theme.breakpoints.down('md')]: {
+            width: '100%'
+        },
     }
 }))
 

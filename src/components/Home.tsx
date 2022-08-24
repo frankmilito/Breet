@@ -3,6 +3,7 @@ import { makeStyles } from '@mui/styles'
 import backgroundImage from '../assets/background.svg'
 import HeroSection from './HeroSection'
 import Services from './services/Services'
+import Testimonials from './Testimonials'
 const useStyles = makeStyles((theme) => ({
     wrapper: {
         background: `url(${backgroundImage})`,
@@ -19,6 +20,7 @@ const Home = () => {
             <Navbar />
             <HeroSection />
             <Services />
+            <Testimonials />
         </div>
     )
 }

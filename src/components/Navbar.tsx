@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         color: "#fff",
         width: "100vw",
         padding: '2em 8em',
-
+        paddingBottom: 0
 
     },
     container: {
@@ -81,7 +81,7 @@ function Header() {
 
     return (
         <>
-            <AppBar position="fixed" style={{ background: 'transparent', boxShadow: 'none', }} className={classes.appBar}>
+            <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none', }} className={classes.appBar}>
                 <CssBaseline />
                 <Toolbar style={{ padding: 0, margin: 0 }}>
                     <Grid

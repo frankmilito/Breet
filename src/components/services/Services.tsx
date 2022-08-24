@@ -1,6 +1,7 @@
 import { Box, Grid, Button } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 import Cards from '../Reusable/Cards';
+import ListItem from '../Reusable/ListItem';
 import card1 from '../../assets/card1.svg'
 import customer1 from '../../assets/customer1.svg'
 import customer2 from '../../assets/customer2.svg'
@@ -105,18 +106,14 @@ const Services = () => {
                 <Grid item md={5} className={classes.rightSection}>
                     <h2 className={classes.customerTitle}>We connect our customers with the best, and help them keep up-and stay open.</h2>
                     <div className={classes.bulletPoints}>
-                        <div className={classes.imageBox}> <img src={checkImage} alt="" className={classes.image} /> <p>We connect our customers with the best.</p></div>
-                        <div className={classes.imageBox}>
-                            <img src={checkImage} alt="" className={classes.image} /> <p>Advisor success customer launch party.</p>
-                        </div>
-                        <div className={classes.imageBox}>
-                            <img src={checkImage} alt="" className={classes.image} /> <p>Business-to-consumer long tail.</p>
-                        </div>
+                        <ListItem />
+                        <ListItem />
+                        <ListItem />
                     </div>
-                    <Button className='button-contained' variant='contained' color='primary'>Start Now</Button>
+
                 </Grid>
                 <Grid item md={5} className={classes.leftSection}>
-                    <img src={customer1} alt="" />
+                    <img src={customer2} alt="" />
                 </Grid>
             </Grid>
 

@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: '1em',
+        marginBottom: '6em'
 
     },
     wrapper: {

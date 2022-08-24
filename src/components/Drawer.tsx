@@ -81,7 +81,6 @@ const useStyles = makeStyles((theme) => ({
 
 const DrawerComponent = () => {
     const [openDrawer, setOpenDrawer] = React.useState(false);
-    const [openHome, setOpenHome] = useState(false);
 
     const classes = useStyles();
 
@@ -125,7 +124,7 @@ const DrawerComponent = () => {
                     >
                         <ListItemText>
                             <Typography variant="body1" className={classes.links}>
-                                Home
+                                Product
                             </Typography>
                         </ListItemText>
                     </ListItem>
@@ -136,7 +135,7 @@ const DrawerComponent = () => {
                     >
                         <ListItemText>
                             <Typography variant="body1" className={classes.links}>
-                                About us
+                                Services
                             </Typography>{" "}
                         </ListItemText>
                     </ListItem>
@@ -146,7 +145,7 @@ const DrawerComponent = () => {
                     >
                         <ListItemText>
                             <Typography variant="body1" className={classes.links}>
-                                Shop
+                                About
                             </Typography>
                         </ListItemText>
                     </ListItem>
@@ -157,14 +156,14 @@ const DrawerComponent = () => {
                     >
                         <ListItemText>
                             <Typography variant="body1" className={`${classes.links} `}>
-                                Contact us
+                                Login
                             </Typography>{" "}
                         </ListItemText>
                     </ListItem>
                 </List>
             </Drawer>
             <IconButton onClick={() => setOpenDrawer(!openDrawer)}>
-                <Menu />
+                <Menu style={{ color: '#fff' }} />
             </IconButton>
         </>
     );

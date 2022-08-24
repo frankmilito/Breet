@@ -3,9 +3,14 @@ import { makeStyles } from '@mui/styles'
 import Cards from '../Reusable/Cards';
 import ListItem from '../Reusable/ListItem';
 import card1 from '../../assets/card1.svg'
+import card2 from '../../assets/card2.svg'
+import card3 from '../../assets/card3.svg'
 import customer1 from '../../assets/customer1.svg'
 import customer2 from '../../assets/customer2.svg'
 import checkImage from '../../assets/checkImage.svg'
+import feather from '../../assets/feather.svg'
+import eye from '../../assets/eye.svg'
+import star from '../../assets/sun.svg'
 import { Theme } from '@mui/system'
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -104,6 +109,40 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 const Services = () => {
     const classes = useStyles();
+    const listItems = [
+        {
+            title: 'We connect our customers with the best.',
+            icon: feather,
+            color: 'white',
+            backgroundColor: 'rgba(10, 38, 64, 1)'
+        },
+        {
+            title: 'Advisor success customer launch party.',
+            icon: eye
+        },
+        {
+            title: 'Business-to-consumer long tail.',
+            icon: star
+        },
+    ]
+
+    const cardItems = [
+        {
+            image: card1,
+            title: 'Cool feature title',
+            content: 'Learning curve network effects return on investment.'
+        },
+        {
+            image: card2,
+            title: 'Even cooler feature',
+            content: 'Learning curve network effects return on investment.'
+        },
+        {
+            image: card3,
+            title: 'Cool feature title',
+            content: 'Learning curve network effects return on investment.'
+        },
+    ]
     return (
         <Box className={classes.container}>
             <div className={classes.titleContainer}>
@@ -111,9 +150,10 @@ const Services = () => {
                 <h2 className={classes.subtitle}>Handshake infographic mass market crowdfunding iteration.</h2>
             </div>
             <Box className={classes.cards}>
-                <Cards image={card1} title={'title one'} content={'content1'} link={'explore'} />
-                <Cards image={card1} title={'title one'} content={'content1'} link={'explore'} />
-                <Cards image={card1} title={'title one'} content={'content1'} link={'explore'} />
+                {cardItems.map(cardItem => (
+                    <Cards key={cardItem.title} image={cardItem.image} title={cardItem.title} content={cardItem.content} link={'explore'} />
+
+                ))}
             </Box>
             <Grid container className={classes.sectionContainer}>
                 <Grid item md={5} className={classes.leftSection}>
@@ -138,9 +178,12 @@ const Services = () => {
                 <Grid item md={5} className={classes.rightSection}>
                     <h2 className={classes.customerTitle}>We connect our customers with the best, and help them keep up-and stay open.</h2>
                     <div className={classes.bulletPoints}>
-                        <ListItem />
-                        <ListItem />
-                        <ListItem />
+                        {/* <ListItem background={'rgba(10, 38, 64, 1)'} color='white' />
+                        <ListItem /> */}
+                        {listItems.map(listItem => (
+
+                            <ListItem image={listItem.icon} title={listItem.title} color={listItem.color} background={listItem.backgroundColor} />
+                        ))}
                     </div>
 
                 </Grid>

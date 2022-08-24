@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { makeStyles } from '@mui/styles'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Theme } from '@mui/system'
@@ -27,17 +27,22 @@ const useStyles = makeStyles((theme: Theme) => ({
         fontSize: '20px',
         lineHeight: '22px',
         fontWeight: 400,
-        margin: '10px 0',
+        margin: '12px 0',
+        marginBottom: '20px',
         [theme.breakpoints.down('md')]: {
             fontSize: '16px'
         }
     },
     links: {
-        display: 'inline',
+        display: 'flex',
+        justifyContent: 'center',
+        width: 'fit-content',
         alignItems: 'center',
-        justifyContent: 'start',
         borderBottom: '1px solid black',
         textUnderlineOffset: '5px',
+        [theme.breakpoints.down('md')]: {
+            margin: '0 auto'
+        }
     }
 }))
 
@@ -52,10 +57,10 @@ const Cards = ({ image, title, content, link }: CardsProps) => {
     return (
         <div className={classes.container}>
             <img src={image} alt="" />
-            <p className={classes.title}>Cool feature title</p>
-            <h3 className={classes.subtitle}>Learning curve network effects return on investment.</h3>
+            <p className={classes.title}>{title}</p>
+            <h3 className={classes.subtitle}>{content}</h3>
             <span className={classes.links}>
-                <span style={{ marginRight: '10px' }}>Explore Page</span> <ArrowForwardIcon />
+                <span style={{ marginRight: '10px', marginBottom: '5px' }}>Explore Page</span> <ArrowForwardIcon />
             </span>
         </div>
     )

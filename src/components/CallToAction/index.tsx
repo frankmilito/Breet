@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         borderRadius: '1em',
         marginBottom: '6em',
         [theme.breakpoints.down('md')]: {
-            margin: '0 4em',
+            margin: '0 2em',
             marginBottom: '3em'
         }
     },
@@ -54,7 +54,8 @@ const useStyles = makeStyles((theme: Theme) => ({
         margin: '0 auto',
         [theme.breakpoints.down('md')]: {
             gridTemplateColumns: '1fr',
-
+            width: '90%',
+            gap: '1em'
         }
     }
 }))
@@ -66,7 +67,7 @@ const CallToAction = () => {
             <div className={classes.wrapper}>
                 <h1 className={classes.title}>An enterprise template to ramp up your company website</h1>
                 <div className={classes.cta}>
-                    <input type="text" className={classes.input} />
+                    <input placeholder='Enter Message' type="text" className={classes.input} />
                     <Button color='secondary' variant='contained' className='button-contained' style={{
                         width: '400px !important'
                     }}>Start Now</Button>

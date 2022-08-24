@@ -1,4 +1,3 @@
-import React, { useState, } from "react";
 import {
     AppBar,
     CssBaseline,
@@ -23,7 +22,10 @@ const useStyles = makeStyles((theme: Theme) => ({
         color: "#fff",
         width: "100vw",
         padding: '2em 8em',
-        paddingBottom: 0
+        paddingBottom: 0,
+        [theme.breakpoints.down('md')]: {
+            padding: '2em 4em'
+        }
 
     },
     container: {
@@ -77,7 +79,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 function Header() {
     const classes = useStyles();
     const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+    const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
 
     return (
         <>
@@ -101,8 +103,6 @@ function Header() {
                         {isMobile ? (
                             <>
                                 <Box>
-                                    <IconButton>
-                                    </IconButton>{" "}
                                     <DrawerComponent
                                     />
                                 </Box>

@@ -13,11 +13,11 @@ const useStyles = makeStyles((theme: Theme) => ({
         justifyContent: 'space-between',
         alignItems: 'center',
         paddingBottom: 0,
-
+        height: '100%',
         [theme.breakpoints.down('md')]: {
             height: '100%',
             flexDirection: 'column',
-            padding: '2em 4em'
+            padding: '2em 3em'
         }
     },
     wrapper: {
@@ -43,8 +43,10 @@ const useStyles = makeStyles((theme: Theme) => ({
             lineHeight: '40px',
         },
         [theme.breakpoints.down('md')]: {
-            fontSize: '24px',
+            fontSize: '30px',
             lineHeight: '30px',
+            marginBottom: '1em',
+            textAlign: 'center'
         },
     },
     subTitle: {
@@ -62,8 +64,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     rightSection: {
         display: 'flex',
         justifyContent: 'flex-end',
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down('lg')]: {
             justifyContent: 'center',
+            paddingTop: '2em'
         },
     },
     brands: {
@@ -72,7 +75,11 @@ const useStyles = makeStyles((theme: Theme) => ({
         justifyContent: 'center',
         width: '100%',
         paddingBottom: '2em',
-        position: 'relative'
+        position: 'relative',
+        [theme.breakpoints.down('md')]: {
+            paddingTop: '2em'
+
+        }
     },
     overlay: {
         position: 'absolute',

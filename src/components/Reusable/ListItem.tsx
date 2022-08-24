@@ -18,12 +18,18 @@ const useStyles = makeStyles((theme: Theme) => ({
         }
     }
 }))
-const ListItem = () => {
+type ListItemProps = {
+    background?: string
+    color?: string
+    title: string
+    image: string
+}
+const ListItem = ({ background, color, title, image }: ListItemProps) => {
     const classes = useStyles();
     return (
-        <div className={classes.listItem}>
-            <img src={feather} alt="" style={{ fill: '#000', marginRight: '20px' }} />
-            <h3 className={classes.subtitle}>We connect our customers with the best.</h3>
+        <div className={classes.listItem} style={{ backgroundColor: `${background}`, color: `${color}` }}>
+            <img src={image} alt="" style={{ fill: '#000', marginRight: '20px' }} />
+            <h3 className={classes.subtitle}>{title}.</h3>
         </div>
     )
 }

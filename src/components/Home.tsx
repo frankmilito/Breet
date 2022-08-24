@@ -6,6 +6,7 @@ import Services from './services/Services'
 import Testimonials from './Testimonials'
 import Faq from './Faq'
 import Blog from './Blog'
+import CallToAction from './CallToAction'
 const useStyles = makeStyles((theme) => ({
     wrapper: {
         background: `url(${backgroundImage})`,
@@ -25,6 +26,7 @@ const Home = () => {
             <Testimonials />
             <Faq />
             <Blog />
+            <CallToAction />
         </div>
     )
 }

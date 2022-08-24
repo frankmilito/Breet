@@ -10,27 +10,26 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         color: 'rgba(0, 0, 0, 1)',
-        fontSize: '24px',
+        fontSize: '20px',
         fontWeight: 400,
-        marginTop: '.5em'
     },
     subtitle: {
         color: 'rgba(119, 119, 119, 1)',
-        fontSize: '20px',
-        lineHeight: '22px',
+        fontSize: '16px',
         fontWeight: 400,
-        margin: '10px 0'
     },
     links: {
-        display: 'inline',
+        display: 'flex',
         alignItems: 'center',
         justifyContent: 'start',
-        borderBottom: '1px solid black',
-        textUnderlineOffset: '5px',
+        marginTop: '2em '
+
     },
     details: {
         display: 'flex',
         justifyContent: 'space-between',
+        alignItems: 'center',
+        margin: '1em 0'
     }
 }))
 
@@ -46,15 +45,15 @@ const Blogs = ({ image, content, link, faqIcon }: CardsProps) => {
         <div className={classes.container}>
             <img src={image} alt="" />
             <div className={classes.details}>
-                <p className={classes.title}>Cool feature title</p>
-                <h3 className={classes.subtitle}>Learning curve network effects return on investment.</h3>
+                <p className={classes.title}>Category</p>
+                <h3 className={classes.subtitle}>November 22, 2021</h3>
             </div>
-            <h3>
-                Pitch termsheet backing validation focus release.
-            </h3>
+            <p >
+                {content}
+            </p>
             <div className={classes.links}>
-                <img src={faqIcon} alt="" />
-                <p></p>
+                <img src={faqIcon} alt="" style={{ marginRight: '10px' }} />
+                <p>{link}</p>
             </div>
         </div>
     )

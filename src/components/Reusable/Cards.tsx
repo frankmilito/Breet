@@ -2,6 +2,7 @@
 import { makeStyles } from '@mui/styles'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Theme } from '@mui/system'
+import { CardsProps } from '../../interfaces';
 
 const useStyles = makeStyles((theme: Theme) => ({
     container: {
@@ -46,12 +47,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     }
 }))
 
-type CardsProps = {
-    image: string,
-    title: string,
-    content: string,
-    link: string,
-}
+
 const Cards = ({ image, title, content, link }: CardsProps) => {
     const classes = useStyles();
     return (

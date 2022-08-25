@@ -1,5 +1,6 @@
 import { makeStyles } from '@mui/styles'
 import { Theme } from '@mui/system'
+import { CardsProps } from '../../interfaces';
 const useStyles = makeStyles((theme: Theme) => ({
     container: {
         padding: '5em 8em',
@@ -40,12 +41,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     }
 }))
 
-type CardsProps = {
-    image: string,
-    content: string,
-    link: string,
-    faqIcon: string,
-}
+
 const Blogs = ({ image, content, link, faqIcon }: CardsProps) => {
     const classes = useStyles();
     return (
